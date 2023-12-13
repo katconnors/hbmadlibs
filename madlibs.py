@@ -70,8 +70,14 @@ def show_madlib():
     person= request.args.get("person")
     noun= request.args.get("noun")
     adjective = request.args.get("adjective")
+    verb1 = request.args.get("verb1")
+    verb2 = request.args.get("verb2")
+    # print(verb1)
+    # print(verb2)
 
-    return render_template("madlibs.html", color=color, person=person, adjective=adjective, noun=noun)
+
+
+    return render_template("madlibs.html", color=color, person=person, adjective=adjective, noun=noun, verb1=verb1, verb2=verb2)
 
     #can't return multiple here
     #conditional to either load the goodbye html or the game html

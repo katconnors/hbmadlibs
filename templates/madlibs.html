@@ -9,8 +9,14 @@
 
      There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
 When {{ person }} went to pick it up, it burst into flames in a totally
-{{ adjective }} way.
-
+{{ adjective }} way. 
+{% if verb1 and verb2 %}
+Suprised, {{person}} {{verb1}} and {{verb2}} away.
+{% elif verb1 %}
+    Suprised, {{person}} {{verb1}} away.
+{% elif verb2 %}
+    Suprised, {{person}} {{verb2}} away.
+{% endif %}
 </body>
 
 
